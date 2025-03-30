@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 import keras
 import os
+import gdown
 print(keras.__version__)
 print(tf.__version__)
 # Initialize Flask app
@@ -11,6 +12,12 @@ app = Flask(__name__)
 
 # Load the trained model
 from tensorflow.keras.layers import SeparableConv2D
+#file_id = https://drive.google.com/file/d/1fxlJsdv5ncJsdfv4in6YYxKgjIodmWdq/view?usp=sharing
+file_id = "1fxlJsdv5ncJsdfv4in6YYxKgjIodmWdq"
+download_url = "https://drive.google.com/uc?id=1fxlJsdv5ncJsdfv4in6YYxKgjIodmWdq"
+model_path = "./Model.h5"
+if not os.path.exists(model_path):
+    gdown.download(download_url, model_path, quiet=False)
 
 # Load the model with custom objects if needed
 model = tf.keras.models.load_model('./Model.h5')

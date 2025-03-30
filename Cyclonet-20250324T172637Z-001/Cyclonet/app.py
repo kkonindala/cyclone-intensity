@@ -20,7 +20,7 @@ if not os.path.exists(model_path):
     gdown.download(download_url, model_path, quiet=False)
 
 # Load the model with custom objects if needed
-model = tf.keras.models.load_model('./Model.h5')
+model = tf.keras.models.load_model('./Model.h5') 
 
 
 # Define the path for saving uploaded images

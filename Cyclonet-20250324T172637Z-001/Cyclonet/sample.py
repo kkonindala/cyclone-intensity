@@ -11,7 +11,7 @@ def preprocess_image(image_path, target_size):
     img_array = np.array(img) / 255.0           # Normalize to [0, 1]
     img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
     return img_array
-
+ 
 # Example: Single input image test
 image_path = "test_image.png"  # Replace with your image path
 target_size = (512, 512)  # Replace with your model's expected input size

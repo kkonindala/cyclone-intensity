@@ -13,7 +13,7 @@ def preprocess_image(image_path, target_size):
     img_array = np.array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
-
+ 
 # Example: Single input image test
 image_path = "test_image.png"
 target_size = (512, 512)
